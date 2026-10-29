@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semicolon; — Coffee & Space</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            semicolon<span class="highlight">;</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Beranda</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#menu">Daftar Menu</a></li>
+                <li><a href="#feedback">Ulasan</a></li>
+                <li><a href="#location">Lokasi</a></li>
+            </ul>
+        </nav>
+        <button class="btn-cart-floating" onclick="toggleCartDrawer()">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-badge-num" id="cartCount">0</span>
+        </button>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-badge-tag">☀️ Tempat Nongkrong & WFC Paling Hits!</div>
+        <h1>Arahkan Langkahmu, Rehat Sejenak di <span class="highlight-text">semicolon;</span></h1>
+        <p class="hero-subtitle">Bukan sekadar kopi biasa. Kami racik kopi arabika pilihan dengan suasana super ceria buat nemenin hari-harimu!</p>
+        
+        <div class="hero-actions">
+            <a href="#menu" class="btn-pop btn-orange">Pesan Sekarang 🎉</a>
+            <a href="#location" class="btn-pop btn-teal">Cek Lokasi Kedai 📍</a>
+        </div>
+
+        <div class="stats-container-playful">
+            <div class="stat-card stat-1">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Arabika Biji Asli</span>
+            </div>
+            <div class="stat-card stat-2">
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Varian Rasa Seru</span>
+            </div>
+            <div class="stat-card stat-3">
+                <span class="stat-num">4.9 ★</span>
+                <span class="stat-label">Rating Pengunjung</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="bento-about">
+            <div class="bento-main">
+                <span class="section-badge-fun">✨ Cerita Kami</span>
+                <h2>Kenapa Harus semicolon; ?</h2>
+                <p>Sama kayak tanda titik koma dalam kalimat, semicolon; itu jeda manis buat kamu beristirahat sejenak dari padatnya rutinitas sebelum lanjut bikin karya hebat berikutnya!</p>
+            </div>
+            <div class="bento-side bento-highlight-1">
+                <h3>☕ Kopi Arabika Pilihan</h3>
+                <p>Diolah segar oleh barista berpengalaman untuk rasa autentik.</p>
+            </div>
+            <div class="bento-side bento-highlight-2">
+                <h3>⚡ Wi-Fi Kencang & Cozy</h3>
+                <p>Colokan di mana-mana, pas banget buat kamu yang mau WFC!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="section-header-centered">
+            <span class="section-badge-fun">🍹 Sajian Spesial</span>
+            <h2>Pilih & Pesan Mandiri</h2>
+            <p>Langsung klik menu favoritmu, atur jumlahnya, dan bayar praktis via QRIS atau Tunai!</p>
+        </div>
+
+        <div class="order-type-toggle">
+            <button class="type-pill active" id="btnDineIn" onclick="setOrderType('Dine In')">🍽️ Dine In (Makan di Tempat)</button>
+            <button class="type-pill" id="btnTakeAway" onclick="setOrderType('Take Away')">🛍️ Take Away (Bawa Pulang)</button>
+        </div>
+
+        <div class="category-pills">
+            <button class="cat-pill active" onclick="filterCategory('all', this)">🌈 Semua Menu</button>
+            <button class="cat-pill" onclick="filterCategory('coffee', this)">☕ Kopi Mantap</button>
+            <button class="cat-pill" onclick="filterCategory('non-coffee', this)">🍵 Non-Coffee Segar</button>
+            <button class="cat-pill" onclick="filterCategory('pastry', this)">🥐 Pastry & Snack</button>
+        </div>
+
+        <div class="asymmetric-grid">
+            <div class="menu-card card-featured" data-category="coffee">
+                <div class="card-tag tag-featured">🔥 Signature Cafe</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Mont Blanc Coffee">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Mont Blanc Coffee</h3>
+                        <span class="price-chip">Rp 38.000</span>
+                    </div>
+                    <p>Espresso dingin dengan sentuhan orange essence & krim lembut khas semicolon;.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Mont Blanc Coffee', 38000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="coffee">
+                <div class="card-tag tag-popular">⭐ Paling Laris</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Iced Vanilla Latte">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Iced Vanilla Latte</h3>
+                        <span class="price-chip">Rp 32.000</span>
+                    </div>
+                    <p>Espresso espresso blend, sirup vanilla autentik, dan susu segar dingin.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Iced Vanilla Latte', 32000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="non-coffee">
+                <div class="card-tag tag-refreshing">🍃 Segar Banget</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Matcha Cream Latte">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Matcha Cream Latte</h3>
+                        <span class="price-chip">Rp 35.000</span>
+                    </div>
+                    <p>Matcha Uji Jepang pilihan dipadu susu creamy yang pas banget di lidah.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Matcha Cream Latte', 35000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-baked">🥐 Freshly Baked</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Butter Croissant">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Butter Croissant</h3>
+                        <span class="price-chip">Rp 28.000</span>
+                    </div>
+                    <p>Croissant renyah beraroma mentega gurih, dipanggang hangat tiap pagi.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Butter Croissant', 28000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-drawer-playful" id="cartDrawer">
+        <div class="drawer-head">
+            <h3>🛒 Keranjang Pesanan</h3>
+            <button class="btn-close-drawer" onclick="toggleCartDrawer()">✕</button>
+        </div>
+        <div class="order-badge-pill" id="orderTypeBadge">Opsi: Dine In</div>
+        <div class="cart-items-container" id="cartItems">
+            <p class="empty-cart-text">Keranjangmu masih kosong nih.<br>Yuk pilih menu favoritmu!</p>
+        </div>
+        <div class="drawer-foot">
+            <div class="cost-row"><span>Subtotal</span><span id="subtotalText">Rp 0</span></div>
+            <div class="cost-row"><span>Pajak PB1 (10%)</span><span id="taxText">Rp 0</span></div>
+            <div class="cost-row total-cost"><span>Total Tagihan</span><span id="totalText">Rp 0</span></div>
+            <button class="btn-pop btn-orange full-width" id="checkoutBtn" onclick="openPaymentModal()" disabled>Lanjut ke Pembayaran 💳</button>
+        </div>
+    </div>
+
+    <section id="feedback" class="feedback-section">
+        <div class="section-header-centered">
+            <span class="section-badge-fun">💬 Kata Pengunjung</span>
+            <h2>Cerita Dari Teman semicolon;</h2>
+        </div>
+        <div class="staggered-feedback-grid">
+            <div class="review-card card-tilt-left">
+                <div class="quote-mark">“</div>
+                <p>Tempatnya seru & nggak ngebosenin! Kopi Mont Blanc-nya seger jeruknya berasa banget, wajib coba!</p>
+                <div class="reviewer-profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Sarah">
+                    <div>
+                        <h4>Sarah L.</h4>
+                        <div class="star-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card card-hero-review">
+                <div class="quote-mark">“</div>
+                <p>Hidden gem di Cimahi! WiFi kencang, banyak colokan, dan croissant-nya paling enak pas dipanggang ulang!</p>
+                <div class="reviewer-profile">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Michael">
+                    <div>
+                        <h4>Michael R.</h4>
+                        <div class="star-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card card-tilt-right">
+                <div class="quote-mark">“</div>
+                <p>Suka banget sama kasir mandirinya lewat web ini, praktis tinggal klik terus scan QRIS. Nggak pakai ngantre lama!</p>
+                <div class="reviewer-profile">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Emma">
+                    <div>
+                        <h4>Emma W.</h4>
+                        <div class="star-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location-section">
+        <div class="location-card-playful">
+            <div class="location-badge">📍 Mampir Yuk!</div>
+            <h2>Lokasi & Jam Buka Kedai</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span>🏢 Alamat Kedai:</span>
+                    <p>Jl. Terusan Digidaw No. 0, Cimahi Ujung, Kabupaten Cimahi, Sunda Barat</p>
+                </div>
+                <div class="info-item">
+                    <span>⏰ Jam Operasional:</span>
+                    <p>Buka Setiap Hari (08.00 - 22.00 WIB)</p>
+                </div>
+                <div class="info-item">
+                    <span>📲 Kontak WhatsApp:</span>
+                    <p>+62 81123124531</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-playful">
+            <div class="footer-brand">
+                <div class="logo">semicolon<span class="highlight">;</span></div>
+                <p>Ruang rehat sejenak dengan sajian kopi nikmat, suasana ceria, dan energi positif untuk harimu!</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Jelajahi</h4>
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#menu">Daftar Menu</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4>Temani Kami</h4>
+                <ul>
+                    <li><a href="#">Instagram (@semicolon.coffee)</a></li>
+                    <li><a href="#">TikTok semicolon;</a></li>
+                    <li><a href="#">WhatsApp Admin</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 semicolon; Coffee & Space. Crafted with Joy & Coffee Beans!</p>
+        </div>
+    </footer>
+
+    <!-- MODAL PEMBAYARAN -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-box-playful">
+            <h2>Pilih Pembayaran 💳</h2>
+            <p class="total-highlight">Total Tagihan: <strong id="modalTotalText">Rp 0</strong></p>
+
+            <div class="payment-selection">
+                <button class="pay-btn active" onclick="selectPayment('qris', this)">
+                    <span class="pay-title">📱 QRIS / E-Wallet</span>
+                    <span class="pay-sub">GoPay, OVO, Dana, ShopeePay, M-Banking</span>
+                </button>
+                <button class="pay-btn" onclick="selectPayment('cash', this)">
+                    <span class="pay-title">💵 Tunai di Kasir</span>
+                    <span class="pay-sub">Bayar tunai di meja kasir barista</span>
+                </button>
+            </div>
+
+            <div id="qrisDetail" class="payment-detail">
+                <p>Scan QRIS di bawah ini dengan aplikasi pembayaran favoritmu:</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=SEMICOLON_COFFEE_TRANSACTION" alt="Kode QRIS">
+            </div>
+
+            <div id="cashDetail" class="payment-detail hidden">
+                <p>Silakan tunjukkan nomor antreanmu di kasir untuk menyelesaikan pembayaran tunai.</p>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn-pop btn-gray" onclick="closePaymentModal()">Batal</button>
+                <button class="btn-pop btn-orange" onclick="processPayment()">Konfirmasi Bayar 🎉</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL RESI / STRUK -->
+    <div class="modal-overlay" id="receiptModal">
+        <div class="modal-box-playful receipt-theme">
+            <div class="badge-success-icon">✓</div>
+            <h2>Pesanan Diterima!</h2>
+            <p>Pesananmu langsung disiapkan barista kami.</p>
+
+            <div class="queue-card-playful">
+                <span>Nomor Antrean Kamu</span>
+                <h1 id="queueNum">S-001</h1>
+            </div>
+
+            <div class="receipt-summary">
+                <div class="r-row"><span>Kedai:</span> <strong>semicolon; Coffee</strong></div>
+                <div class="r-row"><span>Opsi:</span> <strong id="rOrderType">Dine In</strong></div>
+                <div class="r-row"><span>Bayar Via:</span> <strong id="rPaymentMethod">QRIS</strong></div>
+                <div class="r-row"><span>Total:</span> <strong id="rTotalAmount">Rp 0</strong></div>
+            </div>
+
+            <button class="btn-pop btn-teal full-width" onclick="resetKiosk()">Pesan Lagi ☕</button>
+        </div>
+    </div>
+
+    <script src="skrip.js"></script>
+</body>
+</html>

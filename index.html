@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>semicolon; — Coffee & Space</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -22,8 +22,10 @@
             <ul class="nav-links">
                 <li><a href="#hero" class="active">Beranda</a></li>
                 <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#happy-hour">Happy Hour</a></li>
                 <li><a href="#menu">Daftar Menu</a></li>
                 <li><a href="#feedback">Ulasan</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#location">Lokasi</a></li>
             </ul>
         </nav>
@@ -40,7 +42,7 @@
         
         <div class="hero-actions">
             <a href="#menu" class="btn-pop btn-orange">Pesan Sekarang 🎉</a>
-            <a href="#location" class="btn-pop btn-teal">Cek Lokasi Kedai 📍</a>
+            <a href="#happy-hour" class="btn-pop btn-teal">Cek Promo Happy Hour ⚡</a>
         </div>
 
         <div class="stats-container-playful">
@@ -49,7 +51,7 @@
                 <span class="stat-label">Arabika Biji Asli</span>
             </div>
             <div class="stat-card stat-2">
-                <span class="stat-num">15+</span>
+                <span class="stat-num">30+</span>
                 <span class="stat-label">Varian Rasa Seru</span>
             </div>
             <div class="stat-card stat-3">
@@ -77,6 +79,55 @@
         </div>
     </section>
 
+    <section id="happy-hour" class="happy-hour-section">
+        <div class="happy-hour-banner">
+            <div class="happy-hour-header">
+                <span class="section-badge-fun">⚡ PROMO SPESIAL (14.00 - 17.00 WIB)</span>
+                <h2>Happy Hour Bundling Deals! 🥳</h2>
+                <p>Beli paket hemat favoritmu dan rasakan sensasi nongkrong seru tanpa bikin kantong bolong!</p>
+                <div class="timer-box">
+                    <span>Berakhir dalam: </span>
+                    <strong id="happyHourTimer">02:45:12</strong>
+                </div>
+            </div>
+
+            <div class="bundling-grid">
+                <div class="bundle-card">
+                    <div class="bundle-badge">Diskon 25%</div>
+                    <h3>Paket WFC Produktif</h3>
+                    <p class="bundle-desc">Mont Blanc Coffee + Butter Croissant</p>
+                    <div class="bundle-price">
+                        <span class="old-price">Rp 66.000</span>
+                        <span class="new-price">Rp 49.000</span>
+                    </div>
+                    <button class="btn-pop btn-orange full-width" onclick="addToCart('Paket WFC Produktif', 49000)">+ Ambil Paket</button>
+                </div>
+
+                <div class="bundle-card highlight-bundle">
+                    <div class="bundle-badge badge-pink">Paling Laris 🔥</div>
+                    <h3>Paket Berdua Ceria</h3>
+                    <p class="bundle-desc">2 Iced Vanilla Latte + Choco Lava Explosion</p>
+                    <div class="bundle-price">
+                        <span class="old-price">Rp 94.000</span>
+                        <span class="new-price">Rp 69.000</span>
+                    </div>
+                    <button class="btn-pop btn-teal full-width" onclick="addToCart('Paket Berdua Ceria', 69000)">+ Ambil Paket</button>
+                </div>
+
+                <div class="bundle-card">
+                    <div class="bundle-badge">Diskon 30%</div>
+                    <h3>Paket Chill Non-Coffee</h3>
+                    <p class="bundle-desc">Matcha Cream Latte + Cheesy Garlic Toast</p>
+                    <div class="bundle-price">
+                        <span class="old-price">Rp 61.000</span>
+                        <span class="new-price">Rp 45.000</span>
+                    </div>
+                    <button class="btn-pop btn-orange full-width" onclick="addToCart('Paket Chill Non-Coffee', 45000)">+ Ambil Paket</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="menu" class="menu-section">
         <div class="section-header-centered">
             <span class="section-badge-fun">🍹 Sajian Spesial</span>
@@ -93,15 +144,15 @@
             <button class="cat-pill active" onclick="filterCategory('all', this)">🌈 Semua Menu</button>
             <button class="cat-pill" onclick="filterCategory('coffee', this)">☕ Kopi Mantap</button>
             <button class="cat-pill" onclick="filterCategory('non-coffee', this)">🍵 Non-Coffee Segar</button>
-            <button class="cat-pill" onclick="filterCategory('pastry', this)">🥐 Pastry & Snack</button>
+            <button class="cat-pill" onclick="filterCategory('pastry', this)">🥐 Pastry & Makanan</button>
         </div>
 
         <div class="asymmetric-grid">
-            <!-- 4 MENU UTAMA -->
+            <!-- MENU 1: Mont Blanc Coffee -->
             <div class="menu-card" data-category="coffee">
                 <div class="card-tag tag-featured">🔥 Signature Cafe</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Mont Blanc Coffee">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Mont Blanc Coffee">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -113,10 +164,11 @@
                 </div>
             </div>
 
+            <!-- MENU 2: Iced Vanilla Latte -->
             <div class="menu-card" data-category="coffee">
                 <div class="card-tag tag-popular">⭐ Paling Laris</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Iced Vanilla Latte">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Iced Vanilla Latte">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -128,10 +180,11 @@
                 </div>
             </div>
 
+            <!-- MENU 3: Matcha Cream Latte -->
             <div class="menu-card" data-category="non-coffee">
                 <div class="card-tag tag-refreshing">🍃 Segar Banget</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Matcha Cream Latte">
+                    <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?auto=format&fit=crop&w=800&q=80" alt="Matcha Cream Latte">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -143,10 +196,11 @@
                 </div>
             </div>
 
+            <!-- MENU 4: Butter Croissant -->
             <div class="menu-card" data-category="pastry">
                 <div class="card-tag tag-baked">🥐 Freshly Baked</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Butter Croissant">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Butter Croissant">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -158,11 +212,11 @@
                 </div>
             </div>
 
-            <!-- 10 MENU TAMBAHAN -->
+            <!-- MENU 5: Rainbow Unicorn Frappe -->
             <div class="menu-card" data-category="non-coffee">
                 <div class="card-tag tag-featured">🦄 Super Colorful</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Rainbow Unicorn Frappe">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Rainbow Unicorn Frappe">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -174,10 +228,11 @@
                 </div>
             </div>
 
+            <!-- MENU 6: Sunset Citrus Cold Brew -->
             <div class="menu-card" data-category="coffee">
                 <div class="card-tag tag-refreshing">🍊 Refreshing</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Sunset Citrus Cold Brew">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Sunset Citrus Cold Brew">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -189,10 +244,11 @@
                 </div>
             </div>
 
+            <!-- MENU 7: Choco Lava Explosion -->
             <div class="menu-card" data-category="pastry">
                 <div class="card-tag tag-baked">🍫 Sweet Tooth</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Choco Lava Explosion">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Choco Lava Explosion">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -204,14 +260,15 @@
                 </div>
             </div>
 
+            <!-- MENU 8: Avocado Coffee Avocado -->
             <div class="menu-card" data-category="coffee">
                 <div class="card-tag tag-popular">⭐ Best Combo</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Avocado Coffee Avocado">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Avocado Coffee Avocado">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
-                        <h3>Avocado Coffee Avocado</h3>
+                        <h3>Avocado Coffee</h3>
                         <span class="price-chip">Rp 38.000</span>
                     </div>
                     <p>Jus alpukat kental berpadu single shot espresso & saus karamel.</p>
@@ -219,10 +276,11 @@
                 </div>
             </div>
 
+            <!-- MENU 9: Berry Berry Hibiscus -->
             <div class="menu-card" data-category="non-coffee">
                 <div class="card-tag tag-refreshing">🍓 Fruity Fresh</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Berry Berry Hibiscus">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Berry Berry Hibiscus">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -234,10 +292,11 @@
                 </div>
             </div>
 
+            <!-- MENU 10: Cheesy Garlic Toast -->
             <div class="menu-card" data-category="pastry">
                 <div class="card-tag tag-baked">🧀 Savory Snack</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Cheesy Garlic Toast">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Cheesy Garlic Toast">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -249,10 +308,11 @@
                 </div>
             </div>
 
+            <!-- MENU 11: Tiramisu Cloud Latte -->
             <div class="menu-card" data-category="coffee">
                 <div class="card-tag tag-featured">☁️ Creamy Dream</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="Tiramisu Cloud Latte">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Tiramisu Cloud Latte">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -264,10 +324,11 @@
                 </div>
             </div>
 
+            <!-- MENU 12: Matcha Berry Fusion -->
             <div class="menu-card" data-category="non-coffee">
                 <div class="card-tag tag-refreshing">🌱 Unique Taste</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Matcha Berry Fusion">
+                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80" alt="Matcha Berry Fusion">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -279,10 +340,11 @@
                 </div>
             </div>
 
+            <!-- MENU 13: Smoked Beef Croissant -->
             <div class="menu-card" data-category="pastry">
                 <div class="card-tag tag-baked">🥐 Heavy Snack</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Smoked Beef & Cheese Croissant">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Smoked Beef Croissant">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -294,10 +356,11 @@
                 </div>
             </div>
 
+            <!-- MENU 14: Tropical Mango Yakult -->
             <div class="menu-card" data-category="non-coffee">
                 <div class="card-tag tag-popular">🥭 Vitamin Booster</div>
                 <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Tropical Mango Yakult">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Tropical Mango Yakult">
                 </div>
                 <div class="card-details">
                     <div class="card-title-price">
@@ -306,6 +369,247 @@
                     </div>
                     <p>Campuran buah mangga harum manis asli dengan yakult dingin.</p>
                     <button class="btn-add-cart" onclick="addToCart('Tropical Mango Yakult', 31000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- 15 MENU TAMBAHAN BARU (TERBARU) -->
+            <!-- MENU 15: Smoky BBQ Burger -->
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-featured">Best Seller</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Smoky BBQ Burger">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Smoky BBQ Burger</h3>
+                        <span class="price-chip">Rp 42.000</span>
+                    </div>
+                    <p>Burger daging sapi tebal dengan saus BBQ spesial, keju leleh, dan selada segar.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Smoky BBQ Burger', 42000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 16: Creamy Carbonara Pasta -->
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-popular">Italian Pride</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=80" alt="Creamy Carbonara Pasta">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Creamy Carbonara</h3>
+                        <span class="price-chip">Rp 45.000</span>
+                    </div>
+                    <p>Pasta spaghetti lembut dengan saus krim keju gurih dan daging asap.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Creamy Carbonara Pasta', 45000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 17: Chicken Wings Spicy Honey -->
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-refreshing">Spicy Sweet</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80" alt="Chicken Wings Spicy Honey">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Chicken Wings</h3>
+                        <span class="price-chip">Rp 32.000</span>
+                    </div>
+                    <p>Sayap ayam crispy berbalut saus madu pedas manis yang menggugah selera.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Chicken Wings Spicy Honey', 32000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 18: French Fries Truffle Mayo -->
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-baked">Crispy Snack</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80" alt="French Fries Truffle Mayo">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Truffle French Fries</h3>
+                        <span class="price-chip">Rp 25.000</span>
+                    </div>
+                    <p>Kentang goreng renyah disajikan dengan saus mayo aroma minyak truffle.</p>
+                    <button class="btn-add-cart" onclick="addToCart('French Fries Truffle Mayo', 25000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 19: Matcha Berry Smoothie -->
+            <div class="menu-card" data-category="non-coffee">
+                <div class="card-tag tag-refreshing">Berry Green</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80" alt="Matcha Berry Smoothie">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Matcha Berry Smoothie</h3>
+                        <span class="price-chip">Rp 36.000</span>
+                    </div>
+                    <p>Smoothie sehat campuran buah beri segar dan bubuk matcha pilihan.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Matcha Berry Smoothie', 36000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 20: Caramel Macchiato Ice -->
+            <div class="menu-card" data-category="coffee">
+                <div class="card-tag tag-featured">Sweet Coffee</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80" alt="Caramel Macchiato Ice">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Caramel Macchiato</h3>
+                        <span class="price-chip">Rp 35.000</span>
+                    </div>
+                    <p>Espresso segar dengan susu dingin dan siraman saus karamel manis.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Caramel Macchiato Ice', 35000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 21: Thai Tea Creamy Cheese -->
+            <div class="menu-card" data-category="non-coffee">
+                <div class="card-tag tag-popular">Cheese Foam</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=800&q=80" alt="Thai Tea Creamy Cheese">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Thai Tea Cheese</h3>
+                        <span class="price-chip">Rp 30.000</span>
+                    </div>
+                    <p>Teh khas Thailand otentik dengan lapisan busa keju asin manis yang gurih.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Thai Tea Creamy Cheese', 30000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 22: Affogato Al Caffe -->
+            <div class="menu-card" data-category="coffee">
+                <div class="card-tag tag-featured">Dessert Coffee</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="Affogato Al Caffe">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Affogato Al Caffe</h3>
+                        <span class="price-chip">Rp 33.000</span>
+                    </div>
+                    <p>Satu scoop es krim vanila premium disiram dengan hot espresso pekat.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Affogato Al Caffe', 33000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 23: Korean Garlic Cheese Bread -->
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-baked">Korean Style</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=800&q=80" alt="Korean Garlic Cheese Bread">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Korean Garlic Bread</h3>
+                        <span class="price-chip">Rp 29.000</span>
+                    </div>
+                    <p>Roti empuk isi krim keju manis dengan aroma bawang putih dan mentega.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Korean Garlic Cheese Bread', 29000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 24: Blue Ocean Lemonade -->
+            <div class="menu-card" data-category="non-coffee">
+                <div class="card-tag tag-refreshing">Super Refreshing</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80" alt="Blue Ocean Lemonade">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Blue Ocean Lemonade</h3>
+                        <span class="price-chip">Rp 31.000</span>
+                    </div>
+                    <p>Minuman soda segar warna biru cerah dengan perasan lemon asli.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Blue Ocean Lemonade', 31000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 25: Red Velvet Latte -->
+            <div class="menu-card" data-category="non-coffee">
+                <div class="card-tag tag-popular">Sweet Red</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Red Velvet Latte">"
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Red Velvet Latte</h3>
+                        <span class="price-chip">Rp 34.000</span>
+                    </div>
+                    <p>Minuman susu berperisa kue red velvet lembut dengan taburan remahan kue.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Red Velvet Latte', 34000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 26: Nasi Goreng Special Semicolon -->
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-featured">Local Pride</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" alt="Nasi Goreng Special Semicolon">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Nasi Goreng Special</h3>
+                        <span class="price-chip">Rp 38.000</span>
+                    </div>
+                    <p>Nasi goreng rempah lengkap dengan telur mata sapi, sate ayam, dan kerupuk.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Nasi Goreng Special Semicolon', 38000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 27: Choco Hazelnut Frappe -->
+            <div class="menu-card" data-category="coffee">
+                <div class="card-tag tag-refreshing">Nutty Choco</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Choco Hazelnut Frappe">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Choco Hazelnut Frappe</h3>
+                        <span class="price-chip">Rp 37.000</span>
+                    </div>
+                    <p>Es kopi campur cokelat dan hazelnut berbalut whipped cream melimpah.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Choco Hazelnut Frappe', 37000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 28: Avocado Toast Poached Egg -->
+            <div class="menu-card" data-category="pastry">
+                <div class="card-tag tag-baked">Healthy Choice</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Avocado Toast Poached Egg">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Avocado Toast</h3>
+                        <span class="price-chip">Rp 35.000</span>
+                    </div>
+                    <p>Roti gandum panggang dengan lumatan alpukat segar dan telur setengah matang.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Avocado Toast Poached Egg', 35000)">+ Tambah ke Pesanan</button>
+                </div>
+            </div>
+
+            <!-- MENU 29: Ice Lychee Tea -->
+            <div class="menu-card" data-category="non-coffee">
+                <div class="card-tag tag-popular">Fruit Tea</div>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80" alt="Ice Lychee Tea">
+                </div>
+                <div class="card-details">
+                    <div class="card-title-price">
+                        <h3>Ice Lychee Tea</h3>
+                        <span class="price-chip">Rp 28.000</span>
+                    </div>
+                    <p>Teh hitam dingin berkualitas tinggi dengan tambahan buah leci segar pilihan.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Ice Lychee Tea', 28000)">+ Tambah ke Pesanan</button>
                 </div>
             </div>
         </div>
@@ -330,10 +634,12 @@
 
     <section id="feedback" class="feedback-section">
         <div class="section-header-centered">
-            <span class="section-badge-fun">💬 Kata Pengunjung</span>
+            <span class="section-badge-fun">💬 Ulasan Pengunjung</span>
             <h2>Cerita Dari Teman semicolon;</h2>
+            <p>Lihat pengalaman mereka atau bagikan ulasan pengalamanmu sendiri di bawah ini!</p>
         </div>
-        <div class="staggered-feedback-grid">
+
+        <div class="staggered-feedback-grid" id="reviewsContainer">
             <div class="review-card card-tilt-left">
                 <div class="quote-mark">“</div>
                 <p>Tempatnya seru & nggak ngebosenin! Kopi Mont Blanc-nya seger jeruknya berasa banget, wajib coba!</p>
@@ -357,16 +663,72 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="review-card card-tilt-right">
-                <div class="quote-mark">“</div>
-                <p>Suka banget sama kasir mandirinya lewat web ini, praktis tinggal klik terus scan QRIS. Nggak pakai ngantre lama!</p>
-                <div class="reviewer-profile">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Emma">
-                    <div>
-                        <h4>Emma W.</h4>
-                        <div class="star-rating">★★★★★</div>
+        <div class="add-review-box">
+            <h3>✍️ Tambahkan Ulasan Kamu</h3>
+            <form id="reviewForm">
+                <div class="form-group-row">
+                    <input type="text" id="reviewerName" placeholder="Nama Kamu..." required>
+                    <div class="star-picker" id="starPicker">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5" class="active">★</span>
                     </div>
+                </div>
+                <textarea id="reviewText" rows="3" placeholder="Tuliskan ulasan jujur atau kesanmu nongkrong di semicolon;..." required></textarea>
+                <button type="submit" class="btn-pop btn-teal">Kirim Ulasan 🚀</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="section-header-centered">
+            <span class="section-badge-fun">❓ FAQ</span>
+            <h2>Pertanyaan Sering Diajukan</h2>
+            <p>Punya pertanyaan seputar kedai semicolon;? Temukan jawabannya di bawah ini!</p>
+        </div>
+
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Apakah tersedia Wi-Fi kencang dan banyak colokan listrik untuk WFC?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Tentu saja! semicolon; dirancang khusus untuk memenuhi kebutuhan WFC dan kerja remote. Kami menyediakan koneksi Wi-Fi berkecepatan tinggi serta colokan listrik di hampir setiap meja.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Bagaimana cara memesan lewat kasir mandiri web ini?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Cukup pilih menu favoritmu di bagian "Daftar Menu", sesuaikan opsi Dine In / Take Away, klik tombol checkout di keranjang, lalu bayar via QRIS atau Tunai di meja kasir barista.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Kapan promo Happy Hour Bundling berlaku?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Promo Happy Hour berlaku setiap hari pada jam 14.00 - 17.00 WIB. Kamu bisa memesan paket hemat kopi + snack dengan harga spesial selama jam promo tersebut!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Apakah menerima pembayaran non-tunai (E-Wallet & M-Banking)?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Ya! Kami mendukung seluruh pembayaran digital berstandar QRIS seperti GoPay, OVO, Dana, ShopeePay, serta aplikasi M-Banking dari seluruh bank nasional.</p>
                 </div>
             </div>
         </div>
@@ -379,7 +741,7 @@
             <div class="info-grid">
                 <div class="info-item">
                     <span>🏢 Alamat Kedai:</span>
-                    <p>Jl. Terusan Digidaw No. 0, Cimahi Dalem, Desa Cimahi, Jawa Atas </p>
+                    <p>Jl. Terusan Digidaw No. 42, Bandung, Kota Bandung, Jawa Barat</p>
                 </div>
                 <div class="info-item">
                     <span>⏰ Jam Operasional:</span>
@@ -387,7 +749,7 @@
                 </div>
                 <div class="info-item">
                     <span>📲 Kontak WhatsApp:</span>
-                    <p>+62 81duatigaakusayangs3mu4/p>
+                    <p>+62 8123456767</p>
                 </div>
             </div>
         </div>
@@ -404,6 +766,7 @@
                 <ul>
                     <li><a href="#hero">Beranda</a></li>
                     <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#happy-hour">Happy Hour</a></li>
                     <li><a href="#menu">Daftar Menu</a></li>
                 </ul>
             </div>
